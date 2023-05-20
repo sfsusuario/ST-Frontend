@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 namespace STGenetics.Models.contexts
 {
+    /// <summary>
+    /// Main database context
+    /// </summary>
     public partial class MainDBContext : DbContext
     {
         private string connectionString = "Data Source=data.sqlite";

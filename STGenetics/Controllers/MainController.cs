@@ -17,6 +17,10 @@ namespace STGenetics.Controllers
             _dbContext = context;
         }
 
+        /// <summary>
+        /// List all elements
+        /// </summary>
+        /// <returns>Element list</returns>
         [HttpGet]
         [Route("list")]
         public async Task<IActionResult> List()
@@ -25,7 +29,10 @@ namespace STGenetics.Controllers
             return Ok(lista);
         }
 
-
+        /// <summary>
+        /// Create a new element
+        /// </summary>
+        /// <param name="request">Element to create</param>
         [HttpPost]
         [Route("create")]
         public async Task<IActionResult> Create([FromBody] Element request)
@@ -35,6 +42,10 @@ namespace STGenetics.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Update a element
+        /// </summary>
+        /// <param name="request">Element to update</param>
         [HttpPut]
         [Route("update")]
         public async Task<IActionResult> Editar([FromBody] Element request)
@@ -44,6 +55,10 @@ namespace STGenetics.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Delete a element
+        /// </summary>
+        /// <param name="id">Identifier</param>
         [HttpDelete]
         [Route("delete/{id:int}")]
         public async Task<IActionResult> Eliminar(int id)
